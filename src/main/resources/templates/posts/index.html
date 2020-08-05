@@ -6,8 +6,10 @@
     <title>Title</title>
 </head>
 <body>
-<div th:each="item : ${postList}">
-    <h3 th:text="${item.getTitle()}"></h3>
+<div th:each="item : ${posts}">
+    <h3 th:text="${item.title}"></h3>
+    <a th:href="@{'/posts/' + ${item.id}}">View Post</a>
+    </a>
 </div>
 </body>
 </html>
