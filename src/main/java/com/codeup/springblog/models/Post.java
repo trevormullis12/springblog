@@ -57,4 +57,12 @@ public class Post {
     public void setId(long id) {
         this.id = id;
     }
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
+    }
 }
