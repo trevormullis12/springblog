@@ -52,7 +52,7 @@ public class PostController {
 //        Post newPost = new Post(post.title, body, user);
         postDao.save(post);
         emailService.prepareAndSend(post, post.getTitle(), post.getBody());
-        return "redirect:/posts";
+        return "redirect:posts";
     }
 
     @GetMapping("/posts/{id}/edit")
@@ -71,12 +71,12 @@ public class PostController {
 
         postDao.save(postToEdit);
 
-        return "redirect:/posts/" + id;
+        return "redirect:posts/" + id;
     }
 
     @PostMapping("/posts/{id}/delete")
     public String delete(@PathVariable long id) {
         postDao.deleteById(id);
-        return "redirect:/posts";
+        return "redirect:posts";
     }
 }
