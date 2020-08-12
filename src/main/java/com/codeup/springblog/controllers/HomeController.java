@@ -16,8 +16,8 @@ public class HomeController {
         return "home";
     }
 
-    @PostMapping("/")
-    public String returnCohort(@RequestParam(name = "cohort") String cohort, Model model) {
-        return "";
-    }
+//    @PostMapping("/")
+//    public String returnCohort(@RequestParam(name = "cohort") String cohort, Model model) {
+//        return "";
+//    }
 }

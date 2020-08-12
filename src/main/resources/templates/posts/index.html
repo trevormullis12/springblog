@@ -8,6 +8,8 @@
 <body>
 <div th:each="item : ${posts}">
     <h3 th:text="${item.title}"></h3>
+    <p th:text="${item.body}"></p>
+    <p>Posted By: <span th:text="${post.author.email}"></span></p>
     <a th:href="@{'/posts/' + ${item.id}}">View Post</a>
     </a>
 </div>
